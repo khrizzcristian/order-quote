@@ -29,6 +29,7 @@
   "store/orderquote.summary.discounts": "Reduceri",
   "store/orderquote.summary.taxes": "Taxe",
   "store/orderquote.summary.total": "Total",
+  "store/orderquote.summary.empty": "Nimic de arătat.",
   "store/orderquote.create.title": "Salvați oferta",
   "store/orderquote.create.nameLabel": "Nume",
   "store/orderquote.create.descriptionLabel": "Descriere",

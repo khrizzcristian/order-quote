@@ -229,6 +229,9 @@ const QuoteList: StorefrontFunctionComponent<WrappedComponentProps & any> = ({
             <div className={`mb5 ${handles.listContainer}`}>
               <Table
                 fullWidth
+                emptyStateLabel={translateMessage({
+                  id: 'store/orderquote.summary.empty',
+                })}
                 schema={defaultSchema}
                 items={data.getCarts}
                 density="high"

@@ -61,6 +61,7 @@ const CSS_HANDLES = [
   'itemNameContainer',
   'itemName',
   'itemSkuName',
+  'totalizerContainer'
 ] as const
 
 const QuoteCreate: StorefrontFunctionComponent<WrappedComponentProps & any> = ({
@@ -477,6 +478,9 @@ const QuoteCreate: StorefrontFunctionComponent<WrappedComponentProps & any> = ({
             >
               <Table
                 fullWidth
+                emptyStateLabel={translateMessage({
+                  id: 'store/orderquote.summary.empty',
+                })}
                 schema={defaultSchema}
                 items={itemsCopy}
                 density="medium"
@@ -485,7 +489,7 @@ const QuoteCreate: StorefrontFunctionComponent<WrappedComponentProps & any> = ({
           </div>
           <div className="flex flex-row ph5 ph7-ns">
             <div
-              className={`flex flex-column w-100 mb5  ${handles.totalizerContainer}`}
+              className={`flex flex-column w-100 mb5 ${handles.totalizerContainer}`}
             >
               <Totalizer items={summary} />
             </div>

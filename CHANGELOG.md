@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Add missing CSS handle
+- Translations for empty table state
+
+
 ## [1.5.2] - 2021-03-16
 
 ### Changed
