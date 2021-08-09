@@ -29,6 +29,7 @@
   "store/orderquote.summary.discounts": "Descuentos",
   "store/orderquote.summary.taxes": "Impuestos",
   "store/orderquote.summary.total": "Total",
+  "store/orderquote.summary.empty": "Nada que mostrar.",
   "store/orderquote.create.title": "Guardar Cotización",
   "store/orderquote.create.nameLabel": "Nombre",
   "store/orderquote.create.descriptionLabel": "Descripción",

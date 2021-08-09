@@ -571,6 +571,9 @@ const QuoteCreate: StorefrontFunctionComponent<WrappedComponentProps & any> = ({
           >
             <Table
               fullWidth
+              emptyStateLabel={translateMessage({
+                id: 'store/orderquote.summary.empty',
+              })}          
               schema={defaultSchema}
               items={quoteList.items}
               loading={loading}

@@ -29,6 +29,7 @@
   "store/orderquote.summary.discounts": "Discounts",
   "store/orderquote.summary.taxes": "Taxes",
   "store/orderquote.summary.total": "Total",
+  "store/orderquote.summary.empty": "Nothing to show.",
   "store/orderquote.create.title": "Save Quotation",
   "store/orderquote.create.nameLabel": "Name",
   "store/orderquote.create.descriptionLabel": "Description",
