@@ -7,13 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Breaking table in create quote view if page is refreshed
+
 ## [1.5.3] - 2021-08-09
 
 ### Fixed
 
 - Add missing CSS handle
 - Translations for empty table state
-
 
 ## [1.5.2] - 2021-03-16
 
@@ -22,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed cart items table in create quote and view quote to display `name` instead of `skuName`
 
 ### Added
+
 - New css handles `itemNameContainer`, `itemName` and `itemSkuName`
 
 ### Fixed
@@ -33,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Loading Quotes based on the logged user, not from the orderForm
+
 ## [1.5.0] - 2021-02-24
 
 ## [1.4.0] - 2021-02-03
