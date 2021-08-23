@@ -46,9 +46,6 @@ const useSessionResponse = () => {
   return session
 }
 
-let isAuthenticated =
-  JSON.parse(String(localStore.getItem('orderquote_isAuthenticated'))) ?? false
-
 const CSS_HANDLES = [
   'containerCreate',
   'inputCreate',
@@ -61,7 +58,7 @@ const CSS_HANDLES = [
   'itemNameContainer',
   'itemName',
   'itemSkuName',
-  'totalizerContainer'
+  'totalizerContainer',
 ] as const
 
 const QuoteCreate: StorefrontFunctionComponent<WrappedComponentProps & any> = ({
@@ -81,18 +78,31 @@ const QuoteCreate: StorefrontFunctionComponent<WrappedComponentProps & any> = ({
   const { navigate } = useRuntime()
 
   const { showToast } = useContext(ToastContext)
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false)
   const sessionResponse: any = useSessionResponse()
   const handles = useCssHandles(CSS_HANDLES)
 
-  if (sessionResponse) {
-    isAuthenticated =
+  useEffect(() => {
+    const localAuthentiction =
+      JSON.parse(String(localStore.getItem('orderquote_isAuthenticated'))) ??
+      false
+
+    setIsAuthenticated(localAuthentiction)
+
+    if (!sessionResponse) return
+
+    const sessionAuthenticated =
       sessionResponse?.namespaces?.profile?.isAuthenticated?.value === 'true'
+
+    if (sessionAuthenticated === localAuthentiction) return
 
     localStore.setItem(
       'orderquote_isAuthenticated',
-      JSON.stringify(isAuthenticated)
+      JSON.stringify(sessionAuthenticated)
     )
-  }
+
+    setIsAuthenticated(sessionAuthenticated)
+  }, [isAuthenticated, sessionResponse])
 
   const { name, description, savingQuote, errorMessage, clearCart } = _state
 
